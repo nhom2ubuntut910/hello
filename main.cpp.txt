@@ -1,0 +1,32 @@
+#include "stdafx.h"
+#include<math.h>
+#include<iostream>
+#include"Sophuc.h"
+
+using namespace std;
+int _tmain(int argc, _TCHAR* argv[])
+{
+    TComplex ps1;
+    ps1.Nhap();
+    ps1.Xuat();
+    
+    TComplex ps2;
+    ps2.Nhap();
+    ps2.Xuat();
+    
+    TComplex ps3;
+    ps3.Nhap();
+    ps3.Xuat();
+    
+    TComplex ps4;
+    ps4 = (ps1+ps2)/2.0+ps3;
+    ps4.Xuat();
+    
+    TComplex ps5;
+    ps5 = ps1*(ps2+ps3);
+    ps5.Xuat();
+    
+    cin.get();
+    cin.get();
+
+}

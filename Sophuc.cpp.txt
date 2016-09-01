@@ -1,0 +1,52 @@
+// Sophuc1.cpp.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include<math.h>
+#include<iostream>
+#include"Sophuc.h"
+
+using namespace std;
+
+
+
+    
+void TComplex::Nhap() 
+		{
+            cout<<"Nhap phan thuc: ";
+            cin>>pt;
+            cout<<"Nhap phan ao: ";
+            cin>>pa;
+        }
+        
+void TComplex::Xuat() 
+		{
+            cout<<pt<<"+"<<pa<<"i"<<endl;
+        }
+      
+TComplex operator+(TComplex tp1, TComplex tp2) 
+{
+    TComplex kq;
+    kq.pt = tp1.pt + tp2.pt;
+    kq.pa = tp2.pa + tp2.pa;
+    return kq;
+}
+
+TComplex operator*(TComplex tp1, TComplex tp2) 
+{
+    TComplex kq;
+    kq.pt = tp1.pt*tp2.pt - tp1.pa*tp2.pa;
+    kq.pa = tp1.pt*tp2.pa + tp1.pa*tp2.pt;
+    return kq;
+}
+        
+TComplex operator/(TComplex tp1, double x) 
+{
+    TComplex kq;
+    kq.pt = tp1.pt/x;
+    kq.pa = tp1.pa/x;
+    return kq;
+}
+
+
+

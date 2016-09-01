@@ -1,0 +1,26 @@
+	class TComplex 
+{
+    private:
+    	double pt;
+        double pa;
+            
+    public:
+        TComplex(double ta=0, double tb=1) 
+		{
+            pt=ta;
+            pa=tb;
+        }
+        
+        TComplex(const TComplex &tp) 
+		{
+			pt=tp.pt;
+            pa=tp.pa;
+        }
+        
+        void Nhap();
+        void Xuat();
+        
+        friend TComplex operator+(TComplex tp1, TComplex tp2);
+        friend TComplex operator*(TComplex tp1, TComplex tp2);
+        friend TComplex operator/(TComplex tp1, double x);
+    };
